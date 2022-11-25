@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Personnal Library</title>
+</head>
+
+<body>
+    <div class="width100">
+        <h1><span>my</span>Library</h1>
+    </div>
+
+    <button>Show all Books in the Library</button>
+
+    <div class="container">
+        <div class="books scroll gradientBorder">
+
+        </div>
+
+        <div class="addBook">
+
+            <form action="#">
+                <label for="img">Image</label>
+                <div class="chooseImage">
+                    <i class="fas fa-book"></i>
+                    <p>Choose cover image</p>
+                </div>
+                <input type="file" accept="image/*" name="img" id="upload" value="">
+
+                <label for="title">Title</label>
+                <input id='title' name="title" type="text" placeholder="What's the title ?" value="">
+
+                <label for="sum">Summary</label>
+                <textarea id="sum" name="sum" placeholder="Sum up your book !" value="" rows="6"></textarea>
+
+                <label for="read">What age is it for ?</label>
+                <select id="whatAge">
+                    <option value="ToutAge">Tout âge</option>
+                    <option value="Petit">Petit</option>
+                    <option value="Cadet">Cadet</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Ado">Ado</option>
+                    <option value="GrandAdo">Grand Ado</option>
+                </select>
+
+                <input type="submit" id="add" value="Add New Book">
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

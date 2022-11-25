@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* fonts */
+
+@font-face {
+    font-family: rose;
+    src: url(./font/Withrose.ttf);
+}
+
+@font-face {
+    font-family: bright;
+    src: url(./font/Brightholiday.ttf);
+}
+
+@font-face {
+    font-family: marcha;
+    src: url(./font/Marcha.ttf);
+}
+
+@font-face {
+    font-family: simple;
+    src: url(./font/Simple\ script.ttf);
+}
+
+@font-face {
+    font-family: hello;
+    src: url(./font/Hello\ Giorgina.ttf);
+}
+
+
+/* general */
+
+body {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Books_HD_%288314929977%29.jpg/1280px-Books_HD_%288314929977%29.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+h1 {
+    width: fit-content;
+    height: fit-content;
+    font-family: bright;
+    text-align: right;
+    margin-top: 90px;
+    margin-right: 85px;
+    letter-spacing: 20px;
+    font-size: 80px;
+    color: #fffdde;
+    border-bottom: 2px solid #fffdde;
+    border-bottom-right-radius: 50%;
+}
+
+span {
+    position: absolute;
+    top: 60px;
+    right: 460px;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 10px;
+    font-family: simple;
+    transform: rotate(-20deg);
+}
+
+.width100 {
+    width: 99vw;
+    display: flex;
+    justify-content: end;
+}
+
+
+/* button to  show all books */
+
+button {
+    color: #745923;
+    width: 40vw;
+    margin-left: 50px;
+    padding: 20px;
+    font-family: rose;
+    font-size: 20px;
+    font-style: italic;
+    border: solid 2px #e7be6a;
+    border-radius: 20px;
+    background: linear-gradient(#e7be6a, #fffdde);
+}
+
+
+/* container books + add new book */
+
+.container {
+    width: 95vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/************* Books of library  ************/
+
+
+/* all books div */
+
+.books {
+    width: 60vw;
+    height: 90vh;
+    overflow-y: scroll;
+    margin: 50px;
+    padding: 15px;
+    background: linear-gradient(#e7be6a, #e7bd6ada, #fffdde);
+    border: 5px solid #e7be6a;
+    border-radius: 10px;
+}
+
+
+/* all info of the book */
+
+.bookContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*** Img */
+
+.bookImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+}
+
+.bookImg img {
+    height: 150px;
+    width: auto;
+    border-radius: 20px;
+    border-bottom: 5px solid #e7be6a;
+    border-left: 5px solid #e7be6a;
+}
+
+
+/**** Text  */
+
+.bookText {
+    width: fit-content;
+    height: fit-content;
+    background: linear-gradient(#e7be6a, #fffdde);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+
+/* book title */
+
+.bookText h2 {
+    width: 40vw;
+    height: 60px;
+    padding-left: 25px;
+    padding-top: 15px;
+    font-family: rose;
+    color: #745923;
+    border-top: 2px solid #fffdde;
+    border-left: 2px solid #fffdde;
+    border-radius: 40px;
+}
+
+
+/* book summary */
+
+.bookText p {
+    width: 30vw;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: marcha;
+    color: #3d3010;
+}
+
+.bookText small {
+    display: block;
+    padding-right: 25px;
+    width: 40vw;
+    text-align: end;
+    font-family: rose;
+    font-size: 23px;
+    color: #3d3010;
+    border-bottom: 2px solid #e7be6a;
+    border-right: 2px solid #e7be6a;
+    border-radius: 18px;
+}
+
+
+/**** scrollbars ****/
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: #fffdde;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #745923;
+    -webkit-box-shadow: 0 0 1 px rgba(255, 255, 255, .5);
+}
+
+@-moz-document url-prefix() {
+    .scroll {
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+}
+
+
+/******** add new book  ********/
+
+.addBook {
+    position: relative;
+    padding: 10px;
+    padding-top: 2rem;
+    margin: auto;
+    width: 20vw;
+    height: 40rem;
+    background: linear-gradient(#fffdde, #fffddecb, #e7bd6a);
+    border: 5px solid #fffdde;
+    border-radius: 10px;
+}
+
+form {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e7bd6a81;
+    font-family: marcha;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #3d3010ab;
+}
+
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #e7bd6a81;
+    resize: none;
+    font-family: marcha;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #3d3010ab;
+}
+
+::placeholder {
+    font-family: marcha;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #271e09;
+}
+
+option,
+select {
+    font-family: marcha;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #3d3010ab;
+}
+
+option {
+    background-color: #e7bd6a;
+    border-radius: 10px;
+}
+
+label {
+    margin-left: 10px;
+    font-family: rose;
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: #745923;
+}
+
+#upload {
+    position: absolute;
+    top: 2.5rem;
+    z-index: 2;
+    opacity: 0%;
+    background-color: green;
+}
+
+.chooseImage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e7bd6a81;
+    font-family: marcha;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #3d3010ab;
+}
+
+.chooseImage i {
+    font-size: 18px;
+}
+
+input[type="submit"] {
+    bottom: 2rem;
+    left: 25%;
+    position: absolute;
+    margin: auto;
+    width: 150px;
+    color: #745923dc;
+    padding: 5px;
+    font-family: rose;
+    font-size: 20px;
+    font-style: italic;
+    border: solid 2px #fffdde;
+    border-radius: 13px;
+    background: linear-gradient(#fffdde, #e7bd6a);
+}
